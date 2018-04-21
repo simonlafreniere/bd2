@@ -31,8 +31,13 @@ namespace SMI1002_TP1
         private void ClickButtonAnnuler(object sender, RoutedEventArgs e)
         {
             interfaceBD = new InterfaceBD();
-            string sql = "EXEC p(:PRIX,:IDDORTOIR)";
-            interfaceBD.insertData(sql);
+           /* int client = 21;
+            int chambre = 22;
+            DateTime debut= new DateTime(2018,12,25);
+            DateTime fin = new DateTime(2019,01,18);
+            interfaceBD.reserver(client,chambre,debut, fin);
+            //interfaceBD.insertData(sql);*/
+            interfaceBD.getClients();
         }
     }
 }

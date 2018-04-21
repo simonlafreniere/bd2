@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -30,43 +31,7 @@ namespace SMI1002_TP1
 
        
       
-        /*
-        public bool ouvrirConnexion()
-        {
-            try
-            {
-                connection.Open();
-            }
-            catch (OracleException e)
-            {
-                MessageBox.Show(e.Message, "Erreur lors de   l'ouverture de la connexion Oracle");
-                return false;
-            }
-
-            return true;
-        }
-
-        public bool fermerConnexion()
-        {
-            try
-            {
-                connection.Close();
-            }
-            catch (OracleException e)
-            {
-                MessageBox.Show(e.Message, "Erreur lors de la fermeture de la connexion Oracle");
-                return false;
-            }
-            return true;
-        }
-
-        public bool connexionEstOuverte()
-        {
-            if (connection.State == System.Data.ConnectionState.Open)
-                return true;
-
-            return false;
-        }*/
+       
 
         public void insertData(string sql)
         {
@@ -93,6 +58,58 @@ namespace SMI1002_TP1
             command.ExecuteNonQuery();
             command.Connection.Close();
         }
+        public void reserver(int idclient, int idchambre, DateTime debut, DateTime fin)
+        {
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = "pr_reservation";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("leclient", OracleDbType.Int32).Value = idclient;
+                cmd.Parameters.Add("lachambre", OracleDbType.Int32).Value = idchambre;
+                cmd.Parameters.Add("ledebut", OracleDbType.Date).Value = debut;
+                cmd.Parameters.Add("lafin", OracleDbType.Date).Value = fin;
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
 
+        public void getClients(/*ref int[] idclients, ref string[] nomclients, ref string[] prenomclients*/)
+        {
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = connection;
+                cmd.CommandText = "pr_get_clients";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                OracleDataReader reader;
+
+                OracleParameter client=new OracleParameter("clientid", OracleDbType.Int32);
+                client.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(client);
+
+                OracleParameter nom = new OracleParameter("lenom", OracleDbType.Varchar2);
+                client.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(nom);
+
+                OracleParameter prenom = new OracleParameter("leprenom", OracleDbType.Int32);
+                client.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(prenom);
+                
+                connection.Open();
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Console.WriteLine(reader.GetValue(0));
+                }
+                //cmd.ExecuteNonQuery();
+                reader.Close();
+                connection.Close();
+            }
+        }
     }
 }
