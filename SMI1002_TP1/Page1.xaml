@@ -26,17 +26,13 @@
         <Label Margin="50,415,0,0" Content="Nom" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Margin="50,445,0,0" Content="Prenom" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
         <Label Margin="50,475,0,0" Content="Pays" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
-        <Label Margin="50,505,0,0" Content="Id" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
+        <Label Margin="50,505,0,0" Content="IdChambre" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
         <Label Margin="400,415,0,0" Content="Numéro de téléphone" HorizontalAlignment="Left"  VerticalAlignment="Top"/>
-        <Label Margin="400,475,0,0" Content="Numéro de passeport" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2"/>
-        <Label Margin="400,445,0,0" Content="Date de naissance" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="2"/>
         <TextBox Margin="120,415,0,0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Grid.ColumnSpan="2"/>
         <TextBox Margin="120,445,0,0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Grid.ColumnSpan="2"/>
         <TextBox Margin="120,475,0,0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Grid.ColumnSpan="2"/>
         <TextBox Margin="120,505,0,0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="214" Grid.ColumnSpan="2"/>
         <TextBox Margin="550,415,0,0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
-        <DatePicker Margin="550,445,0,50" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="200"/>
-        <TextBox Margin="550,475,0,0" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
         <Button Content="Réserver" HorizontalAlignment="Left" Margin="594,522,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Annuler" HorizontalAlignment="Left" Margin="674,522,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.847,0.077" Click="ClickButtonAnnuler"/>
     </Grid>
