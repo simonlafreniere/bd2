@@ -70,18 +70,28 @@ namespace SMI1002_TP1
 
         public void insertData(string sql)
         {
-            
-            using (OracleConnection connection = new OracleConnection(connectionString))
-            using (OracleCommand command = new OracleCommand(sql, connection))
+
+            /*using (OracleConnection connection = new OracleConnection(connectionString))
+            using (OracleCommand command = new OracleCommand("p", connection))
             {
-                //command.Parameters.Add(new OracleParameter("IDLIT","NULL"));
-                command.Parameters.Add(new OracleParameter("PRIX", 10.00));
+                command.Parameters.Add(new OracleParameter("PRIX", 50));
                 command.Parameters.Add(new OracleParameter("IDDORTOIR", 1));
                 
                 command.Connection.Open();
                 command.ExecuteNonQuery();
                 command.Connection.Close();
-            }
+            }*/
+            OracleConnection connection = new OracleConnection(connectionString);
+            //GIVE PROCEDURE NAME
+            OracleCommand command = new OracleCommand("p", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            command.Parameters.Add(new OracleParameter("PRIX", 5000));
+            command.Parameters.Add(new OracleParameter("IDDORTOIR", 1));
+
+            command.Connection.Open();
+            command.ExecuteNonQuery();
+            command.Connection.Close();
         }
 
     }

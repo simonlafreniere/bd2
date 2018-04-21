@@ -31,7 +31,7 @@ namespace SMI1002_TP1
         private void ClickButtonAnnuler(object sender, RoutedEventArgs e)
         {
             interfaceBD = new InterfaceBD();
-            string sql = "insert into LIT (IDLIT,PRIX,IDDORTOIR) values(NULL,:PRIX,:IDDORTOIR)";
+            string sql = "EXEC p(:PRIX,:IDDORTOIR)";
             interfaceBD.insertData(sql);
         }
     }
