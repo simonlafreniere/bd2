@@ -14,14 +14,6 @@
         <DatePicker Margin="550,100,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="149"/>
         <Label Margin="480,100,0,0" Content="Arrivée :" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
         <Label Margin="100,100,0,0" Content="Départ :" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
-        <Label Margin="50,160,0,261.286" Content="Hébergement disponible" HorizontalAlignment="Left" FontSize="14"/>
-        <ListView Height="160" Margin="50,190,0,100" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.ColumnSpan="2" Width="700">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
         <Label Margin="50,380,0,0" Content="Information personnel" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="14"/>
         <Label Margin="50,415,0,0" Content="Nom" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Margin="50,445,0,0" Content="Prenom" HorizontalAlignment="Left"  VerticalAlignment="Top"/>

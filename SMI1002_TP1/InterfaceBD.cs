@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.OracleClient;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using Oracle.ManagedDataAccess.Client;
+using OracleCommand = Oracle.ManagedDataAccess.Client.OracleCommand;
+using OracleConnection = Oracle.ManagedDataAccess.Client.OracleConnection;
+using OracleDataAdapter = Oracle.ManagedDataAccess.Client.OracleDataAdapter;
+using OracleDataReader = Oracle.ManagedDataAccess.Client.OracleDataReader;
+using OracleParameter = Oracle.ManagedDataAccess.Client.OracleParameter;
 
 namespace SMI1002_TP1
 {
@@ -76,40 +83,47 @@ namespace SMI1002_TP1
             }
         }
 
-        public void getClients(/*ref int[] idclients, ref string[] nomclients, ref string[] prenomclients*/)
+
+        // retourne un DataSet avec le contenu d'une procedure qui retourne plusieurs résultats
+        public DataSet GetSelectProc(string Nom_Procedure)
         {
             using (OracleConnection connection = new OracleConnection(connectionString))
             {
+                DataSet dataset = new DataSet();
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = connection;
-                cmd.CommandText = "pr_get_clients";
+                cmd.CommandText = Nom_Procedure;
                 cmd.CommandType = CommandType.StoredProcedure;
-
-                OracleDataReader reader;
-
-                OracleParameter client=new OracleParameter("clientid", OracleDbType.Int32);
-                client.Direction = ParameterDirection.Output;
-                cmd.Parameters.Add(client);
-
-                OracleParameter nom = new OracleParameter("lenom", OracleDbType.Varchar2);
-                client.Direction = ParameterDirection.Output;
-                cmd.Parameters.Add(nom);
-
-                OracleParameter prenom = new OracleParameter("leprenom", OracleDbType.Int32);
-                client.Direction = ParameterDirection.Output;
-                cmd.Parameters.Add(prenom);
-                
+                OracleParameter curseur = new OracleParameter("curseur", OracleDbType.RefCursor, ParameterDirection.Output);
+                cmd.Parameters.Add(curseur);
                 connection.Open();
-                reader = cmd.ExecuteReader();
+                cmd.ExecuteNonQuery();
+                OracleDataAdapter da = new OracleDataAdapter(cmd);
+                da.Fill(dataset);
 
-                while (reader.Read())
-                {
-                    Console.WriteLine(reader.GetValue(0));
-                }
-                //cmd.ExecuteNonQuery();
-                reader.Close();
+                cmd.Dispose();
                 connection.Close();
+                return dataset;
+            }
+        }
+
+        public void getClients(/*ref int[] idclients, ref string[] nomclients, ref string[] prenomclients*/)
+        {
+            DataSet dataset = new DataSet();
+            OracleConnection myBD = new OracleConnection(connectionString);
+            dataset = GetSelectProc("pr_get_clients");
+            foreach (DataTable table in dataset.Tables)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    ComboBoxItem item = new ComboBoxItem();
+                    item.Content = row["nom"] + ", " + row["prenom"];
+                    item.Tag = row["idclient"]; // Copie l'ID dans la propriété Tag
+                    cbListClients.Items.Add(item);
+                }
+            }
+          
             }
         }
     }
-}
+

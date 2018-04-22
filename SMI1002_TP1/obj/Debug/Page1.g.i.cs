@@ -40,6 +40,38 @@ namespace SMI1002_TP1 {
     /// </summary>
     public partial class Page1 : System.Windows.Controls.Page, System.Windows.Markup.IComponentConnector {
         
+        
+        #line 13 "..\..\Page1.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.DatePicker DPdebut;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 14 "..\..\Page1.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.DatePicker DPfin;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 28 "..\..\Page1.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.ComboBox CBclient;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 29 "..\..\Page1.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.ComboBox CBchambre;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -71,12 +103,24 @@ namespace SMI1002_TP1 {
             switch (connectionId)
             {
             case 1:
+            this.DPdebut = ((System.Windows.Controls.DatePicker)(target));
+            return;
+            case 2:
+            this.DPfin = ((System.Windows.Controls.DatePicker)(target));
+            return;
+            case 3:
             
-            #line 37 "..\..\Page1.xaml"
+            #line 27 "..\..\Page1.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.ClickButtonAnnuler);
             
             #line default
             #line hidden
+            return;
+            case 4:
+            this.CBclient = ((System.Windows.Controls.ComboBox)(target));
+            return;
+            case 5:
+            this.CBchambre = ((System.Windows.Controls.ComboBox)(target));
             return;
             }
             this._contentLoaded = true;

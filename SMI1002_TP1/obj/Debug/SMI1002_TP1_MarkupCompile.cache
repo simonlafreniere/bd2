@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 X:\bd2\SMI1002_TP1\App.xaml
-4-1100743238
+5162446243
 
-91478966194
+14424163728
 1579961426
-MainWindow.xaml;Page1.xaml;Page2.xaml;Page3.xaml;
+MainWindow.xaml;PageClient.xaml;PageReserver.xaml;Page2.xaml;Page3.xaml;
 
-False
+True
 

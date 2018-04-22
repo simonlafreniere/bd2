@@ -26,18 +26,9 @@ namespace SMI1002_TP1
         public MainWindow()
         {
             InitializeComponent();
-            Main.Content = new Page1();
+            Main.Content = new PageReservation();
         }
 
-        private void BtnClick(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnClickP1(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Page1();
-        }
 
         private void BtnClickP2(object sender, RoutedEventArgs e)
         {
@@ -49,7 +40,14 @@ namespace SMI1002_TP1
             Main.Content = new Page3();
         }
 
+        private void BtnClickPclient(object sender, RoutedEventArgs e)
+        {
 
+        }
 
+        private void BtnClickPreservation(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new PageReserver();
+        }
     }
 }

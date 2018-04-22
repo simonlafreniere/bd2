@@ -8,9 +8,10 @@
         Title="MainWindow" Height="650" Width="800">
     <Grid>
         <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
-            <Button Content="Réservation" MinWidth="100" Click="BtnClickP1"/>
+            <Button Content="Réservation" MinWidth="100" Click="BtnClickPreservation"/>
             <Button Content="Annulation" MinWidth="100" Margin="05,0,0,0" Click="BtnClickP2"/>
             <Button Content="Historique" MinWidth="100" Margin="05,0,0,0" Click="BtnClickP3"/>
+            <Button Content="Historique client" MinWidth="100" Margin="05,0,0,0" Click="BtnClickPclient"/>
         </StackPanel>
         <Frame x:Name="Main" Margin="0,35,0,0"/>
         

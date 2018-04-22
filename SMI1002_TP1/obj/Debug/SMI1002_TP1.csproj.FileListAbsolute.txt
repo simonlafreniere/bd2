@@ -85,3 +85,5 @@ C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\obj\Debug\SMI1002_TP1.csproj.G
 C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\obj\Debug\SMI1002_TP1.csproj.CoreCompileInputs.cache
 C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\obj\Debug\SMI1002_TP1.exe
 C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\obj\Debug\SMI1002_TP1.pdb
+X:\bd2\SMI1002_TP1\obj\Debug\PageClient.g.cs
+X:\bd2\SMI1002_TP1\obj\Debug\PageReserver.g.cs
