@@ -27,6 +27,7 @@ namespace SMI1002_TP1
         private const string DB_PASSWORD = "67bdvm73";
 
         private string connectionString;
+
         //private OracleConnection connection;
         public InterfaceBD()
         {
@@ -36,9 +37,9 @@ namespace SMI1002_TP1
                 $"User Id = {DB_USERNAME}; Password = {DB_PASSWORD}";
         }
 
-       
-      
-       
+
+
+
 
         public void insertData(string sql)
         {
@@ -65,6 +66,7 @@ namespace SMI1002_TP1
             command.ExecuteNonQuery();
             command.Connection.Close();
         }
+
         public void reserver(int idclient, int idchambre, DateTime debut, DateTime fin)
         {
             using (OracleConnection connection = new OracleConnection(connectionString))
@@ -94,7 +96,8 @@ namespace SMI1002_TP1
                 cmd.Connection = connection;
                 cmd.CommandText = Nom_Procedure;
                 cmd.CommandType = CommandType.StoredProcedure;
-                OracleParameter curseur = new OracleParameter("curseur", OracleDbType.RefCursor, ParameterDirection.Output);
+                OracleParameter curseur =
+                    new OracleParameter("curseur", OracleDbType.RefCursor, ParameterDirection.Output);
                 cmd.Parameters.Add(curseur);
                 connection.Open();
                 cmd.ExecuteNonQuery();
@@ -107,23 +110,23 @@ namespace SMI1002_TP1
             }
         }
 
-        public void getClients(/*ref int[] idclients, ref string[] nomclients, ref string[] prenomclients*/)
+        public DataSet getClients()
         {
             DataSet dataset = new DataSet();
             OracleConnection myBD = new OracleConnection(connectionString);
             dataset = GetSelectProc("pr_get_clients");
-            foreach (DataTable table in dataset.Tables)
-            {
-                foreach (DataRow row in table.Rows)
-                {
-                    ComboBoxItem item = new ComboBoxItem();
-                    item.Content = row["nom"] + ", " + row["prenom"];
-                    item.Tag = row["idclient"]; // Copie l'ID dans la propriété Tag
-                    cbListClients.Items.Add(item);
-                }
-            }
-          
-            }
+
+            return dataset;
+        }
+
+        public DataSet getChambres()
+        {
+            DataSet dataset = new DataSet();
+            OracleConnection myBD = new OracleConnection(connectionString);
+            dataset = GetSelectProc("pr_get_chambres");
+
+            return dataset;
         }
     }
+}
 

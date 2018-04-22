@@ -20,10 +20,10 @@ namespace SMI1002_TP1
     /// <summary>
     /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class PageClient : Page
     {
         private InterfaceBD interfaceBD;
-        public Page1()
+        public PageClient()
         {
             InitializeComponent();
         }

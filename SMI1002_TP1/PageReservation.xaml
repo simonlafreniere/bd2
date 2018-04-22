@@ -16,7 +16,7 @@
         <Label Margin="468,97,0,0" Content="Départ :" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
         <Button x:Name="BtnReserver" Content="Réserver" HorizontalAlignment="Left" Margin="594,522,0,0" VerticalAlignment="Top" Width="75" Click="BtnReserver_Click"/>
         <Button x:Name="BtnAnnuler" Content="Annuler" HorizontalAlignment="Left" Margin="674,522,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.847,0.077" Click="ClickButtonAnnuler"/>
-        <ComboBox x:Name="CBclient" HorizontalAlignment="Left" Margin="199,193,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.404,0.325" SelectionChanged="CBclient_SelectionChanged" SelectedIndex="1"/>
+        <ComboBox x:Name="CBclient" HorizontalAlignment="Left" Margin="199,193,0,0" VerticalAlignment="Top" Width="120"  SelectedIndex="1"/>
         <ComboBox x:Name="CBchambre" HorizontalAlignment="Left" Margin="579,193,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="1"/>
         <Label Content="Client" HorizontalAlignment="Left" Margin="121,193,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.708,-2.125"/>
         <Label Content="Chambre" HorizontalAlignment="Left" Margin="480,189,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.112,-0.149"/>

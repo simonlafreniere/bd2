@@ -47,7 +47,7 @@ namespace SMI1002_TP1
 
         private void BtnClickPreservation(object sender, RoutedEventArgs e)
         {
-            Main.Content = new PageReserver();
+            Main.Content = new PageReservation();
         }
     }
 }
