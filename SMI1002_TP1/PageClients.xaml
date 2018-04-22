@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream:SMI1002_TP1/PageClient.xaml
-﻿<Page x:Class="SMI1002_TP1.PageClient"
-=======
 ﻿<Page x:Class="SMI1002_TP1.PageClients"
->>>>>>> Stashed changes:SMI1002_TP1/PageClients.xaml
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 

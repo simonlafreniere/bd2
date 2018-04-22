@@ -18,18 +18,16 @@ namespace SMI1002_TP1
     /// <summary>
     /// Logique d'interaction pour PageHistorique.xaml
     /// </summary>
-<<<<<<< Updated upstream:SMI1002_TP1/PageClient.xaml.cs
-    public partial class PageClient : Page
-    {
-        private InterfaceBD interfaceBD;
-        public PageClient()
-=======
+
     public partial class PageHistorique : Page
     {
-        public PageHistorique()
->>>>>>> Stashed changes:SMI1002_TP1/PageHistorique.xaml.cs
-        {
-            InitializeComponent();
-        }
+        private InterfaceBD interfaceBD;
+
+      
+            public PageHistorique()
+            {
+                InitializeComponent();
+            }
+        
     }
 }

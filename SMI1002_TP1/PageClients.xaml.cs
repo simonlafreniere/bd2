@@ -24,5 +24,10 @@ namespace SMI1002_TP1
         {
             InitializeComponent();
         }
+
+        private void ClickButtonAnnuler(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
