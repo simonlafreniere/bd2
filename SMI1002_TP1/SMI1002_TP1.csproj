@@ -71,35 +71,35 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PageClient.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="PageAnnulation.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageClients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageHistorique.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageReservation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Page3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PageClient.xaml.cs">
-      <DependentUpon>PageClient.xaml</DependentUpon>
+    <Compile Include="PageAnnulation.xaml.cs">
+      <DependentUpon>PageAnnulation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageClients.xaml.cs">
+      <DependentUpon>PageClients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageHistorique.xaml.cs">
+      <DependentUpon>PageHistorique.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageReservation.xaml.cs">
       <DependentUpon>PageReservation.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Page2.xaml.cs">
-      <DependentUpon>Page2.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Page3.xaml.cs">
-      <DependentUpon>Page3.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

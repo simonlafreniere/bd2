@@ -30,21 +30,20 @@ namespace SMI1002_TP1
         }
 
 
-        private void BtnClickP2(object sender, RoutedEventArgs e)
+        private void BtnClickPannulation(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Page2();
-        }
-
-        private void BtnClickP3(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Page3();
+            Main.Content = new PageAnnulation();
         }
 
         private void BtnClickPclient(object sender, RoutedEventArgs e)
         {
-
+            Main.Content = new PageClients();
         }
 
+        private void BtnClickPhistorique(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new PageHistorique();
+        }
         private void BtnClickPreservation(object sender, RoutedEventArgs e)
         {
             Main.Content = new PageReservation();

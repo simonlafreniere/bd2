@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace SMI1002_TP1
 {
     /// <summary>
-    /// Interaction logic for Page2.xaml
+    /// Logique d'interaction pour PageClients.xaml
     /// </summary>
-    public partial class Page2 : Page
+    public partial class PageClients : Page
     {
-        public Page2()
+        public PageClients()
         {
             InitializeComponent();
         }

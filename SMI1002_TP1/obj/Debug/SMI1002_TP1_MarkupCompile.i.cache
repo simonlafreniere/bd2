@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-X:\bd2\SMI1002_TP1\obj\Debug\
+C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\obj\Debug\
 SMI1002_TP1
 none
 false
 DEBUG;TRACE
-X:\bd2\SMI1002_TP1\App.xaml
-5-1723468951
+C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\App.xaml
+5178301775
 
-14-342267089
-1579961426
-MainWindow.xaml;PageClient.xaml;PageReservation.xaml;Page2.xaml;Page3.xaml;
+14304360861
+15-1980674571
+MainWindow.xaml;PageAnnulation.xaml;PageClients.xaml;PageHistorique.xaml;PageReservation.xaml;
 
 True
 

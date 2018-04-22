@@ -84,6 +84,14 @@ C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\obj\Debug\SMI1002_TP1.csproj.C
 C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\obj\Debug\SMI1002_TP1.exe
 C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\obj\Debug\SMI1002_TP1.pdb
 X:\bd2\SMI1002_TP1\obj\Debug\PageClient.g.cs
+<<<<<<< Updated upstream
 X:\bd2\SMI1002_TP1\obj\Debug\PageReservation.g.cs
 X:\bd2\SMI1002_TP1\obj\Debug\PageClient.baml
 X:\bd2\SMI1002_TP1\obj\Debug\PageReservation.baml
+=======
+X:\bd2\SMI1002_TP1\obj\Debug\PageReserver.g.cs
+C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\obj\Debug\PageAnnulation.g.cs
+C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\obj\Debug\PageClients.g.cs
+C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\obj\Debug\PageHistorique.g.cs
+C:\Users\picardfr\Desktop\SMI1002\bd2\SMI1002_TP1\obj\Debug\PageReservation.g.cs
+>>>>>>> Stashed changes

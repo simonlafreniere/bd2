@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace SMI1002_TP1
 {
     /// <summary>
-    /// Interaction logic for Page3.xaml
+    /// Logique d'interaction pour PageAnnulation.xaml
     /// </summary>
-    public partial class Page3 : Page
+    public partial class PageAnnulation : Page
     {
-        public Page3()
+        public PageAnnulation()
         {
             InitializeComponent();
         }
